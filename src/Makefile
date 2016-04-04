@@ -1,3 +1,6 @@
-all: hello-openwrt
-hello-openwrt:
-	$(CC) $(FLAG) hello-openwrt.c -o hello-openwrt
+hello-openwrt:hello-openwrt.o
+	$(CXX) $(LDFLAGS) hello-openwrt.o -o hello-openwrt
+hello-openwrt.o:hello-openwrt.cpp
+	$(CXX) $(CXXFLAGS) -c hello-openwrt.cpp
+clean:
+	rm *.o hello-openwrt

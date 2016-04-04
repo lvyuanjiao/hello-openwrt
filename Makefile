@@ -29,6 +29,7 @@ define Package/hello-openwrt
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=Hello OpenWRT
+	DEPENDS:=+libstdcpp
 	#URL:=
 endef
 
